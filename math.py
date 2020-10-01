@@ -109,6 +109,46 @@ def compound_input():
 def compound_interest(x,y,z):
 	comp_ans = x * (1 + (y / 100)) ** z - x
 	return comp_ans
+
+def min_to_sec():
+    a=int(input("Enter no. of seconds :  "))
+    if a%60==0:
+        b=a//60
+        print(b,"mins")
+    elif a%60 <60 and a%60  >0:
+        b=a//60
+        c=a%60
+        print(b,"mins and ",c,"secs")
+    else:
+        print ("enter valid command")
+	
+def even_odd_sum():
+    s=int(input("enter the starting number : "))
+    e=int(input("enter the ending number : "))
+    c=s
+    even_sum=odd_sum=0
+    while c >=s and c <=e:
+        if c%2==0:      #even
+            even_sum=even_sum+c
+        if c%2!=0:      #odd
+            odd_sum=odd_sum+c
+        c+=1
+    print("sum of even no. : ",even_sum)
+    print("sum of odd no. : ",odd_sum)
+	
+def circle_area(r):
+    a=22/7
+    b=a*(r**2)
+    print("area of circle : ",b)
+
+def marks():
+    a=int(input("no. of subjects : "))
+    for i in range (1,a):
+        while a>0 and a<a+1:
+            b=int(input("subject marks"))
+            print("SUBJECT ",a,"MARKS : ",b)
+            c=[b]
+    print(c)
 	
 user_input()
 
